@@ -3,10 +3,12 @@
 import { Button } from "../../_components/button/button";
 import { Input } from "../../_components/input/input";
 
+import ReCAPTCHA from "react-google-recaptcha";
+
 import { useResetPassword } from "./hooks";
 
 export default function ResetPassword() {
-  const { onSubmit } = useResetPassword();
+  const { onSubmit, handleCaptchaChange } = useResetPassword();
   return (
     <div className="flex flex-col gap-4 text-center w-80 max-w-[calc(100vw-20px)]">
       <span className="flex justify-center text-xl">Reset password</span>
@@ -23,6 +25,10 @@ export default function ResetPassword() {
           Reset password
         </Button>
       </form>
+      <ReCAPTCHA
+        sitekey={process.env.GOOGLE_CAPTCHA}
+        onChange={handleCaptchaChange}
+      />
     </div>
   );
 }

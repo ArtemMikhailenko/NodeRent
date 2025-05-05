@@ -4,10 +4,12 @@ import { Link } from "../../_components/link/link";
 import { Button } from "../../_components/button/button";
 import { Input } from "../../_components/input/input";
 
+import ReCAPTCHA from "react-google-recaptcha";
+
 import { useSignUp } from "./hooks";
 
 export default function SignUp() {
-  const { passwordRef, passwordRepeatRef, onSubmit, validatePasswordsMatch } =
+  const { passwordRef, passwordRepeatRef, onSubmit, validatePasswordsMatch, handleCaptchaChange } =
     useSignUp();
   return (
     <div className="flex flex-col gap-4 text-center w-80 max-w-[calc(100vw-20px)]">
@@ -52,6 +54,10 @@ export default function SignUp() {
         </Button>
       </form>
       <Link href="/log-in">Login</Link>
+      <ReCAPTCHA
+        sitekey={process.env.GOOGLE_CAPTCHA}
+        onChange={handleCaptchaChange}
+      />
     </div>
   );
 }

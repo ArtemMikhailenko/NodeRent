@@ -14,7 +14,7 @@ export const MobileNavigation = ({
   const [isOpen, setIsOpen] = useState(false);
   const toggleNavbar = () => setIsOpen((val) => !val);
   return (
-    <div className="fixed w-screen bg-midnight-800 z-10 sm:hidden">
+    <div className="fixed w-screen bg-midnight-800 z-10 lg:hidden">
       <div className="flex justify-between px-4 py-3 border-b border-midnight-950">
         <button onClick={toggleNavbar}>
           <svg
@@ -34,7 +34,7 @@ export const MobileNavigation = ({
           </svg>
         </button>
         {isLoggedIn ? (
-          <a href={ROUTES.cart.href} className="py-2 px-2 flex">
+          <a href={ROUTES.cart.href} className="link py-2 px-2 flex">
             {ROUTES.cart.icon}{" "}
             <span className="ml-1 text-blue-600">{cartCount}</span>
           </a>
@@ -69,8 +69,8 @@ export const MobileNavigation = ({
                   <nav className="flex flex-col">
                     {routes.map((item, index) => (
                       <a
-                        className={`py-2 ${currentPage && currentPage === item.href ? "text-blue-400 bg-midnight-800 rounded" : "text-white"} px-2`}
-                        href={item.href}
+                        className={`flex items-center link py-2 ${currentPage && currentPage === item.href ? "active-link text-blue-400 bg-midnight-800 rounded" : "text-white"} px-2`}
+                        href={isLoggedIn ? item.href : item.guarded ? USER_ROUTES.login.href : item.href}
                         key={index}
                       >
                         <div className="inline-flex gap-1 items-center h-full">

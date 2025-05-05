@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///Users/ilya/Documents/repos/NodeRentFrontEndSources/app/_components/navigation/styles.css"],"sourcesContent":[".active-link{&:after{border-radius:5px;bottom:0;content:\"\";height:2px;left:0;position:absolute;width:100%}.basic-icon{display:none}}.link:not(.active-link){.hover-icon{display:none}&:hover{.hover-icon{display:block}.basic-icon{display:none}}}"],"names":[],"mappings":"AAAa;;;;;;;;;;AAA6F;;;;AAAkD;;;;AAAiC;;;;AAA0B"}},
+    {"offset": {"line": 26, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

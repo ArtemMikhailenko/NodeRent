@@ -1,6 +1,6 @@
 "use client";
 
-import { NodesSection } from "./_comoponents/nodes-section/nodes-section";
+import { TabsSection } from "./_comoponents/tabs-section/tabs-section";
 import { NodeDialog } from "./_comoponents/node-dialog/node-dialog";
 
 import { useHome } from "./hooks";
@@ -19,28 +19,11 @@ export default function Home() {
   } = useHome();
   return (
     <div>
-      <NodesSection
+      <TabsSection
         nodes={nodes}
-        status="active"
         onMoreInfoClick={onMoreInfoClick}
         onAddToCartClick={onAddToCartClick}
         cartIds={cartIds}
-      />
-
-      <NodesSection
-        nodes={nodes}
-        status="awaiting"
-        onMoreInfoClick={onMoreInfoClick}
-        cartIds={cartIds}
-        awaiting
-      />
-
-      <NodesSection
-        nodes={nodes}
-        status="ended"
-        onMoreInfoClick={onMoreInfoClick}
-        cartIds={cartIds}
-        disabled
       />
 
       <NodeDialog

@@ -1,0 +1,1 @@
+.active-link{&:after{border-radius:5px;bottom:0;content:"";height:2px;left:0;position:absolute;width:100%}.basic-icon{display:none}}.link:not(.active-link){.hover-icon{display:none}&:hover{.hover-icon{display:block}.basic-icon{display:none}}}

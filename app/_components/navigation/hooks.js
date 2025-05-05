@@ -9,19 +9,11 @@ export const useNavigation = () => {
   const [isClient, setIsClient] = useState(false);
   const [cartCount, setCartCount] = useState(0);
 
-  const { isLoggedIn, logout } = use(AuthContext);
+  const { user, isLoggedIn, logout } = use(AuthContext);
 
   const currentPage = useMemo(
     () => (isClient ? window?.location?.pathname : undefined),
     [isClient],
-  );
-
-  const routes = useMemo(
-    () =>
-      isLoggedIn
-        ? Object.values(ROUTES)
-        : Object.values(ROUTES).filter((item) => !item.guarded),
-    [isLoggedIn],
   );
 
   const handleLogout = useCallback(async () => {
@@ -53,10 +45,11 @@ export const useNavigation = () => {
   }, []);
 
   return {
-    routes,
+    routes: Object.values(ROUTES),
     currentPage,
     cartCount,
     isLoggedIn,
+    email: user?.email,
     logout: handleLogout,
     goToLogin,
   };

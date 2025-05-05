@@ -1,0 +1,13 @@
+/* [project]/app/_components/tabs/styles.css [app-client] (css) */
+.trigger[data-state="active"]:after {
+  border-radius: 5px;
+  bottom: -1px;
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+
+/*# sourceMappingURL=app__components_tabs_styles_7c40b3.css.map*/

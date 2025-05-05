@@ -11,8 +11,7 @@ export const Card = (props) => {
     onMoreInfoClick,
     onAddToCartClick,
     isAddedToCart = false,
-    disabled = false,
-    awaiting = false,
+    status,
   } = props;
 
   const { handleAddToCart, handleMoreInfoClick } = useCard({
@@ -22,7 +21,7 @@ export const Card = (props) => {
   });
 
   return (
-    <div className="flex flex-col p-2 items-center gap-1 border-4 border-transparent rounded-lg bg-midnight-900 hover:border-blue-400 hover:rotate-1 hover:-translate-y-1">
+    <div className="flex flex-col p-2 items-center gap-2 border-4 border-transparent rounded-lg bg-midnight-900 hover:border-blue-400 hover:rotate-1 hover:-translate-y-1 hover:shadow-blue-400 hover:shadow-[0px_0px_20px]">
       <span className="font-semibold text-lg my-3">{name}</span>
       <img
         src={imgSrc}
@@ -37,14 +36,20 @@ export const Card = (props) => {
         <span className="text-gray-300">Monthly: </span>
         {`$${price}`}
       </span>
-      {awaiting ? (
-        <Button disabled>Awaiting</Button>
+      {status === "awaiting" ? (
+        <Button variant="highlightedGhost" height="l" disabled>
+          Awaiting
+        </Button>
       ) : (
         <>
-          {disabled ? (
-            <Button disabled>Sold out</Button>
+          {status === "ended" ? (
+            <Button variant="highlightedGhost" height="l" disabled>
+              Sold out
+            </Button>
           ) : (
             <Button
+              variant="highlightedGhost"
+              height="l"
               onClick={isAddedToCart ? undefined : handleAddToCart}
               disabled={isAddedToCart}
             >
@@ -60,7 +65,11 @@ export const Card = (props) => {
                   <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
                 </svg>
               ) : (
-                "Add to cart"
+                <img
+                  className="m-auto"
+                  src="/navigation/cart.svg"
+                  alt="Add to cart"
+                />
               )}
             </Button>
           )}

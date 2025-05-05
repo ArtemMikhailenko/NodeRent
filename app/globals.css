@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@plugin "tailwindcss-radix";
+
 :root {
     --background: #1c242b;
     --foreground: #171717;

@@ -1,0 +1,29 @@
+/* [project]/app/_components/navigation/styles.css [app-client] (css) */
+.active-link:after {
+  border-radius: 5px;
+  bottom: 0;
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.active-link .basic-icon {
+  display: none;
+}
+
+.link:not(.active-link) .hover-icon {
+  display: none;
+}
+
+.link:not(.active-link):hover .hover-icon {
+  display: block;
+}
+
+.link:not(.active-link):hover .basic-icon {
+  display: none;
+}
+
+
+/*# sourceMappingURL=app__components_navigation_styles_6192a0.css.map*/

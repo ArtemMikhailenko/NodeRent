@@ -37,7 +37,7 @@ export const useCart = () => {
     ).json();
 
     if (response.status === "success") {
-      alert("success");
+      window.location.href = response.payment_link;
     } else {
       alert("Something went wrong, try again later");
     }

@@ -1,0 +1,17 @@
+{
+    "extends": ["next/core-web-vitals"],
+    "parserOptions": {
+      "ecmaVersion": 2022,
+      "sourceType": "module"
+    },
+    "env": {
+      "browser": true,
+      "es2022": true,
+      "node": true
+    },
+    "rules": {
+      // сюда свои правила, например:
+      // "@next/next/no-img-element": "off"
+    }
+  }
+  

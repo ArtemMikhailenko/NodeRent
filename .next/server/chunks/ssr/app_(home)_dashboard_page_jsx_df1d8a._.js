@@ -6,8 +6,7 @@ module.exports = {
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, z: __turbopack_require_stub__ } = __turbopack_context__;
 {
 __turbopack_esm__({
-    "default": (()=>Dashboard),
-    "useDashboardPage": (()=>useDashboardPage)
+    "default": (()=>Dashboard)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
@@ -971,6 +970,7 @@ function Dashboard() {
         columnNumber: 5
     }, this);
 }
+// Custom hook to fetch dashboard data
 const useDashboardPage = ()=>{
     const [data, setData] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
     const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(true);
@@ -1163,6 +1163,7 @@ const NodeItem = ({ node, isSelected, onSelect, onProlongate, isMenuOpen, onTogg
         className: `
       ${isSelected ? 'bg-gradient-to-r from-midnight-800/90 to-indigo-900/20' : 'bg-midnight-900/80'} 
       ${isHovered ? 'scale-[1.01] shadow-lg shadow-indigo-900/20' : 'shadow shadow-indigo-900/10'} 
+      ${isMenuOpen ? 'z-50 relative isolation-auto' : ''} 
       rounded-lg p-3 sm:p-4 flex items-center justify-between backdrop-blur-sm
       transition-all duration-300 hover:shadow-md hover:shadow-indigo-900/15 
       ${isSelected ? 'border-l-4 border-indigo-500' : 'border border-indigo-900/30 hover:border-indigo-900/50'}
@@ -1178,7 +1179,7 @@ const NodeItem = ({ node, isSelected, onSelect, onProlongate, isMenuOpen, onTogg
                         onChange: onSelect
                     }, void 0, false, {
                         fileName: "[project]/app/(home)/dashboard/page.jsx",
-                        lineNumber: 510,
+                        lineNumber: 511,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1190,35 +1191,35 @@ const NodeItem = ({ node, isSelected, onSelect, onProlongate, isMenuOpen, onTogg
                                         className: "absolute inset-0 rounded-full bg-green-400 opacity-30 blur-xl transform scale-[2]"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                        lineNumber: 520,
+                                        lineNumber: 521,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "absolute inset-0 rounded-full bg-green-500 opacity-60 animate-[ping_3s_ease-in-out_infinite]"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                        lineNumber: 523,
+                                        lineNumber: 524,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "absolute inset-0 rounded-full bg-gradient-to-tr from-green-500 via-green-400 to-emerald-500 opacity-90"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                        lineNumber: 526,
+                                        lineNumber: 527,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "absolute top-0 left-1/4 right-1/4 h-1/3 bg-white opacity-50 rounded-t-full blur-sm"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                        lineNumber: 529,
+                                        lineNumber: 530,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "relative w-2 h-2 sm:w-3 sm:h-3 bg-green-100 rounded-full z-10 shadow-inner shadow-green-300/50"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                        lineNumber: 532,
+                                        lineNumber: 533,
                                         columnNumber: 15
                                     }, this)
                                 ]
@@ -1229,21 +1230,21 @@ const NodeItem = ({ node, isSelected, onSelect, onProlongate, isMenuOpen, onTogg
                                         className: "absolute inset-0 rounded-full bg-red-400 opacity-20 blur-lg transform scale-150 animate-pulse"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                        lineNumber: 538,
+                                        lineNumber: 539,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "absolute inset-0 rounded-full bg-gradient-to-tr from-red-600 via-red-500 to-rose-500 opacity-80"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                        lineNumber: 541,
+                                        lineNumber: 542,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "relative w-2 h-2 sm:w-3 sm:h-3 bg-red-200 rounded-full z-10 shadow-inner shadow-red-500/30"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                        lineNumber: 544,
+                                        lineNumber: 545,
                                         columnNumber: 15
                                     }, this)
                                 ]
@@ -1251,7 +1252,7 @@ const NodeItem = ({ node, isSelected, onSelect, onProlongate, isMenuOpen, onTogg
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/(home)/dashboard/page.jsx",
-                        lineNumber: 516,
+                        lineNumber: 517,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1264,7 +1265,7 @@ const NodeItem = ({ node, isSelected, onSelect, onProlongate, isMenuOpen, onTogg
                                         children: node.node_name || "Nodename From Api #id"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                        lineNumber: 550,
+                                        lineNumber: 551,
                                         columnNumber: 13
                                     }, this),
                                     isActive && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1272,7 +1273,7 @@ const NodeItem = ({ node, isSelected, onSelect, onProlongate, isMenuOpen, onTogg
                                         children: "Active"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                        lineNumber: 552,
+                                        lineNumber: 553,
                                         columnNumber: 15
                                     }, this),
                                     !isActive && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1280,13 +1281,13 @@ const NodeItem = ({ node, isSelected, onSelect, onProlongate, isMenuOpen, onTogg
                                         children: "Ended"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                        lineNumber: 557,
+                                        lineNumber: 558,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                lineNumber: 549,
+                                lineNumber: 550,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1296,14 +1297,14 @@ const NodeItem = ({ node, isSelected, onSelect, onProlongate, isMenuOpen, onTogg
                                         children: getUptime(node.Created, node["Active Until"])
                                     }, void 0, false, {
                                         fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                        lineNumber: 563,
+                                        lineNumber: 564,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "h-1 w-1 rounded-full bg-gray-500 hidden sm:block"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                        lineNumber: 564,
+                                        lineNumber: 565,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1315,25 +1316,25 @@ const NodeItem = ({ node, isSelected, onSelect, onProlongate, isMenuOpen, onTogg
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                        lineNumber: 565,
+                                        lineNumber: 566,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                lineNumber: 562,
+                                lineNumber: 563,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/(home)/dashboard/page.jsx",
-                        lineNumber: 548,
+                        lineNumber: 549,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/(home)/dashboard/page.jsx",
-                lineNumber: 509,
+                lineNumber: 510,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1354,12 +1355,12 @@ const NodeItem = ({ node, isSelected, onSelect, onProlongate, isMenuOpen, onTogg
                                     d: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                                 }, void 0, false, {
                                     fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                    lineNumber: 574,
+                                    lineNumber: 575,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                lineNumber: 573,
+                                lineNumber: 574,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1367,13 +1368,13 @@ const NodeItem = ({ node, isSelected, onSelect, onProlongate, isMenuOpen, onTogg
                                 children: "5 min"
                             }, void 0, false, {
                                 fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                lineNumber: 576,
+                                lineNumber: 577,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/(home)/dashboard/page.jsx",
-                        lineNumber: 572,
+                        lineNumber: 573,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1391,12 +1392,12 @@ const NodeItem = ({ node, isSelected, onSelect, onProlongate, isMenuOpen, onTogg
                                         }
                                     }, i, false, {
                                         fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                        lineNumber: 583,
+                                        lineNumber: 584,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                lineNumber: 581,
+                                lineNumber: 582,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1404,13 +1405,13 @@ const NodeItem = ({ node, isSelected, onSelect, onProlongate, isMenuOpen, onTogg
                                 children: "100%"
                             }, void 0, false, {
                                 fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                lineNumber: 590,
+                                lineNumber: 591,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/(home)/dashboard/page.jsx",
-                        lineNumber: 580,
+                        lineNumber: 581,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1420,7 +1421,7 @@ const NodeItem = ({ node, isSelected, onSelect, onProlongate, isMenuOpen, onTogg
                                 className: "w-2 h-2 rounded-full bg-indigo-400"
                             }, void 0, false, {
                                 fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                lineNumber: 595,
+                                lineNumber: 596,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1428,17 +1429,17 @@ const NodeItem = ({ node, isSelected, onSelect, onProlongate, isMenuOpen, onTogg
                                 children: "100%"
                             }, void 0, false, {
                                 fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                lineNumber: 596,
+                                lineNumber: 597,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/(home)/dashboard/page.jsx",
-                        lineNumber: 594,
+                        lineNumber: 595,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "relative node-menu-container",
+                        className: "relative node-menu-container z-30",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                 className: `text-gray-400 hover:text-white transition-colors duration-200 bg-midnight-800/40 hover:bg-midnight-700/60 rounded-full p-1.5 sm:p-2 ${isMenuOpen ? 'text-white bg-indigo-600/40' : ''}`,
@@ -1455,21 +1456,21 @@ const NodeItem = ({ node, isSelected, onSelect, onProlongate, isMenuOpen, onTogg
                                         d: "M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"
                                     }, void 0, false, {
                                         fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                        lineNumber: 605,
+                                        lineNumber: 606,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                    lineNumber: 604,
+                                    lineNumber: 605,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                lineNumber: 600,
+                                lineNumber: 601,
                                 columnNumber: 11
                             }, this),
                             isMenuOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "absolute right-0 top-full mt-2 bg-midnight-800/95 rounded-lg shadow-xl z-10 min-w-[140px] sm:min-w-[160px] overflow-hidden animate-fadeIn backdrop-blur-md border border-indigo-900/50",
+                                className: "fixed sm:absolute right-0 top-full mt-2 bg-midnight-800/95 rounded-lg shadow-xl z-50 min-w-[140px] sm:min-w-[160px] overflow-hidden animate-fadeIn backdrop-blur-md border border-indigo-900/50",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "px-3 sm:px-4 py-2 sm:py-3 hover:bg-midnight-700 cursor-pointer flex items-center transition-all duration-200 hover:pl-5",
@@ -1489,17 +1490,17 @@ const NodeItem = ({ node, isSelected, onSelect, onProlongate, isMenuOpen, onTogg
                                                         d: "M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                                        lineNumber: 617,
+                                                        lineNumber: 618,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                                    lineNumber: 616,
+                                                    lineNumber: 617,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                                lineNumber: 615,
+                                                lineNumber: 616,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1507,13 +1508,13 @@ const NodeItem = ({ node, isSelected, onSelect, onProlongate, isMenuOpen, onTogg
                                                 children: "Prolongate"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                                lineNumber: 620,
+                                                lineNumber: 621,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                        lineNumber: 611,
+                                        lineNumber: 612,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1533,17 +1534,17 @@ const NodeItem = ({ node, isSelected, onSelect, onProlongate, isMenuOpen, onTogg
                                                         d: "M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                                        lineNumber: 625,
+                                                        lineNumber: 626,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                                    lineNumber: 624,
+                                                    lineNumber: 625,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                                lineNumber: 623,
+                                                lineNumber: 624,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1551,13 +1552,13 @@ const NodeItem = ({ node, isSelected, onSelect, onProlongate, isMenuOpen, onTogg
                                                 children: "Info"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                                lineNumber: 628,
+                                                lineNumber: 629,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                        lineNumber: 622,
+                                        lineNumber: 623,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1577,17 +1578,17 @@ const NodeItem = ({ node, isSelected, onSelect, onProlongate, isMenuOpen, onTogg
                                                         d: "M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                                        lineNumber: 633,
+                                                        lineNumber: 634,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                                    lineNumber: 632,
+                                                    lineNumber: 633,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                                lineNumber: 631,
+                                                lineNumber: 632,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1595,31 +1596,31 @@ const NodeItem = ({ node, isSelected, onSelect, onProlongate, isMenuOpen, onTogg
                                                 children: "Delete"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                                lineNumber: 636,
+                                                lineNumber: 637,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                        lineNumber: 630,
+                                        lineNumber: 631,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                lineNumber: 610,
+                                lineNumber: 611,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/(home)/dashboard/page.jsx",
-                        lineNumber: 599,
+                        lineNumber: 600,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/(home)/dashboard/page.jsx",
-                lineNumber: 570,
+                lineNumber: 571,
                 columnNumber: 7
             }, this)
         ]
@@ -1671,7 +1672,7 @@ const NodeDetailsModal = ({ node, onClose })=>{
                             children: node.node_name
                         }, void 0, false, {
                             fileName: "[project]/app/(home)/dashboard/page.jsx",
-                            lineNumber: 690,
+                            lineNumber: 691,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1689,23 +1690,23 @@ const NodeDetailsModal = ({ node, onClose })=>{
                                     d: "M6 18L18 6M6 6l12 12"
                                 }, void 0, false, {
                                     fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                    lineNumber: 696,
+                                    lineNumber: 697,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                lineNumber: 695,
+                                lineNumber: 696,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/(home)/dashboard/page.jsx",
-                            lineNumber: 691,
+                            lineNumber: 692,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/(home)/dashboard/page.jsx",
-                    lineNumber: 689,
+                    lineNumber: 690,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1721,7 +1722,7 @@ const NodeDetailsModal = ({ node, onClose })=>{
                                             className: "absolute inset-0 bg-gradient-to-tr from-indigo-600/20 via-blue-500/20 to-indigo-600/20 animate-pulse"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                            lineNumber: 704,
+                                            lineNumber: 705,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1729,13 +1730,13 @@ const NodeDetailsModal = ({ node, onClose })=>{
                                             children: (node.node_name || "Node").substring(0, 1).toUpperCase()
                                         }, void 0, false, {
                                             fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                            lineNumber: 705,
+                                            lineNumber: 706,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                    lineNumber: 703,
+                                    lineNumber: 704,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1745,7 +1746,7 @@ const NodeDetailsModal = ({ node, onClose })=>{
                                             children: node.node_name
                                         }, void 0, false, {
                                             fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                            lineNumber: 710,
+                                            lineNumber: 711,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1756,19 +1757,19 @@ const NodeDetailsModal = ({ node, onClose })=>{
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                            lineNumber: 711,
+                                            lineNumber: 712,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                    lineNumber: 709,
+                                    lineNumber: 710,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/(home)/dashboard/page.jsx",
-                            lineNumber: 702,
+                            lineNumber: 703,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1781,7 +1782,7 @@ const NodeDetailsModal = ({ node, onClose })=>{
                                             children: "Status"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                            lineNumber: 717,
+                                            lineNumber: 718,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1791,20 +1792,20 @@ const NodeDetailsModal = ({ node, onClose })=>{
                                                     className: `inline-block w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mr-1.5 sm:mr-2 ${node.status ? "bg-green-400" : "bg-red-400"}`
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                                    lineNumber: 719,
+                                                    lineNumber: 720,
                                                     columnNumber: 17
                                                 }, this),
                                                 node.status ? "Active" : "Inactive"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                            lineNumber: 718,
+                                            lineNumber: 719,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                    lineNumber: 716,
+                                    lineNumber: 717,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1814,7 +1815,7 @@ const NodeDetailsModal = ({ node, onClose })=>{
                                             children: "Project Status"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                            lineNumber: 725,
+                                            lineNumber: 726,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1824,20 +1825,20 @@ const NodeDetailsModal = ({ node, onClose })=>{
                                                     className: `inline-block w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full mr-1.5 sm:mr-2 ${node["Project Status"] === "Active" ? "bg-green-400" : "bg-red-400"}`
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                                    lineNumber: 727,
+                                                    lineNumber: 728,
                                                     columnNumber: 17
                                                 }, this),
                                                 node["Project Status"]
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                            lineNumber: 726,
+                                            lineNumber: 727,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                    lineNumber: 724,
+                                    lineNumber: 725,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1847,7 +1848,7 @@ const NodeDetailsModal = ({ node, onClose })=>{
                                             children: "Created"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                            lineNumber: 733,
+                                            lineNumber: 734,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1855,13 +1856,13 @@ const NodeDetailsModal = ({ node, onClose })=>{
                                             children: node.Created
                                         }, void 0, false, {
                                             fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                            lineNumber: 734,
+                                            lineNumber: 735,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                    lineNumber: 732,
+                                    lineNumber: 733,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1871,7 +1872,7 @@ const NodeDetailsModal = ({ node, onClose })=>{
                                             children: "Active Until"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                            lineNumber: 738,
+                                            lineNumber: 739,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1879,13 +1880,13 @@ const NodeDetailsModal = ({ node, onClose })=>{
                                             children: node["Active Until"]
                                         }, void 0, false, {
                                             fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                            lineNumber: 739,
+                                            lineNumber: 740,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                    lineNumber: 737,
+                                    lineNumber: 738,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1895,7 +1896,7 @@ const NodeDetailsModal = ({ node, onClose })=>{
                                             children: "Monthly Cost"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                            lineNumber: 743,
+                                            lineNumber: 744,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1906,13 +1907,13 @@ const NodeDetailsModal = ({ node, onClose })=>{
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                            lineNumber: 744,
+                                            lineNumber: 745,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                    lineNumber: 742,
+                                    lineNumber: 743,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1922,7 +1923,7 @@ const NodeDetailsModal = ({ node, onClose })=>{
                                             children: "Uptime"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                            lineNumber: 748,
+                                            lineNumber: 749,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1930,19 +1931,19 @@ const NodeDetailsModal = ({ node, onClose })=>{
                                             children: "100%"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                            lineNumber: 749,
+                                            lineNumber: 750,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                    lineNumber: 747,
+                                    lineNumber: 748,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/(home)/dashboard/page.jsx",
-                            lineNumber: 715,
+                            lineNumber: 716,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1956,20 +1957,20 @@ const NodeDetailsModal = ({ node, onClose })=>{
                                             children: "Prolongate"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                            lineNumber: 755,
+                                            lineNumber: 756,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             className: "absolute inset-0 bg-gradient-to-tr from-white/0 via-white/10 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-shimmer"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                            lineNumber: 756,
+                                            lineNumber: 757,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                    lineNumber: 754,
+                                    lineNumber: 755,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1980,7 +1981,7 @@ const NodeDetailsModal = ({ node, onClose })=>{
                                             children: "Details"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                            lineNumber: 760,
+                                            lineNumber: 761,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1988,36 +1989,36 @@ const NodeDetailsModal = ({ node, onClose })=>{
                                             children: "Delete"
                                         }, void 0, false, {
                                             fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                            lineNumber: 763,
+                                            lineNumber: 764,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/(home)/dashboard/page.jsx",
-                                    lineNumber: 759,
+                                    lineNumber: 760,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/(home)/dashboard/page.jsx",
-                            lineNumber: 753,
+                            lineNumber: 754,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/(home)/dashboard/page.jsx",
-                    lineNumber: 701,
+                    lineNumber: 702,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/(home)/dashboard/page.jsx",
-            lineNumber: 685,
+            lineNumber: 686,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/(home)/dashboard/page.jsx",
-        lineNumber: 684,
+        lineNumber: 685,
         columnNumber: 5
     }, this);
 };

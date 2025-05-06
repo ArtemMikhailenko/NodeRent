@@ -394,7 +394,7 @@ export default function Dashboard() {
 }
 
 // Custom hook to fetch dashboard data
-export const useDashboardPage = () => {
+ const useDashboardPage = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   
@@ -502,6 +502,7 @@ const NodeItem = ({ node, isSelected, onSelect, onProlongate, isMenuOpen, onTogg
     <div className={`
       ${isSelected ? 'bg-gradient-to-r from-midnight-800/90 to-indigo-900/20' : 'bg-midnight-900/80'} 
       ${isHovered ? 'scale-[1.01] shadow-lg shadow-indigo-900/20' : 'shadow shadow-indigo-900/10'} 
+      ${isMenuOpen ? 'z-50 relative isolation-auto' : ''} 
       rounded-lg p-3 sm:p-4 flex items-center justify-between backdrop-blur-sm
       transition-all duration-300 hover:shadow-md hover:shadow-indigo-900/15 
       ${isSelected ? 'border-l-4 border-indigo-500' : 'border border-indigo-900/30 hover:border-indigo-900/50'}
@@ -596,7 +597,7 @@ const NodeItem = ({ node, isSelected, onSelect, onProlongate, isMenuOpen, onTogg
           <span className="text-xs">100%</span>
         </div>
         
-        <div className="relative node-menu-container">
+        <div className="relative node-menu-container z-30">
           <button 
             className={`text-gray-400 hover:text-white transition-colors duration-200 bg-midnight-800/40 hover:bg-midnight-700/60 rounded-full p-1.5 sm:p-2 ${isMenuOpen ? 'text-white bg-indigo-600/40' : ''}`}
             onClick={onToggleMenu}
@@ -607,7 +608,7 @@ const NodeItem = ({ node, isSelected, onSelect, onProlongate, isMenuOpen, onTogg
           </button>
           
           {isMenuOpen && (
-            <div className="absolute right-0 top-full mt-2 bg-midnight-800/95 rounded-lg shadow-xl z-10 min-w-[140px] sm:min-w-[160px] overflow-hidden animate-fadeIn backdrop-blur-md border border-indigo-900/50">
+            <div className="fixed sm:absolute right-0 top-full mt-2 bg-midnight-800/95 rounded-lg shadow-xl z-50 min-w-[140px] sm:min-w-[160px] overflow-hidden animate-fadeIn backdrop-blur-md border border-indigo-900/50">
               <div 
                 className="px-3 sm:px-4 py-2 sm:py-3 hover:bg-midnight-700 cursor-pointer flex items-center transition-all duration-200 hover:pl-5"
                 onClick={onProlongate}

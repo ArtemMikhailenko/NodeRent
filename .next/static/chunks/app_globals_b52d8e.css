@@ -375,6 +375,10 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
   top: 100%;
 }
 
+.isolation-auto {
+  isolation: auto;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -385,6 +389,10 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
 
 .z-50 {
   z-index: 50;
+}
+
+.z-30 {
+  z-index: 30;
 }
 
 .m-4 {
@@ -1318,11 +1326,6 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
   --tw-gradient-stops: var(--tw-gradient-from), #818cf84d var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
-.via-indigo-500 {
-  --tw-gradient-to: #6366f100 var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), #6366f1 var(--tw-gradient-via-position), var(--tw-gradient-to);
-}
-
 .via-red-500 {
   --tw-gradient-to: #ef444400 var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), #ef4444 var(--tw-gradient-via-position), var(--tw-gradient-to);
@@ -1331,11 +1334,6 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
 .via-white\/10 {
   --tw-gradient-to: #fff0 var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), #ffffff1a var(--tw-gradient-via-position), var(--tw-gradient-to);
-}
-
-.via-indigo-100 {
-  --tw-gradient-to: #e0e7ff00 var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), #e0e7ff var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
 .to-blue-600 {
@@ -1376,10 +1374,6 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
 
 .to-midnight-800 {
   --tw-gradient-to: #202b36 var(--tw-gradient-to-position);
-}
-
-.to-purple-500 {
-  --tw-gradient-to: #a855f7 var(--tw-gradient-to-position);
 }
 
 .to-rose-500 {
@@ -1885,10 +1879,6 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
   transition-timing-function: cubic-bezier(.4, 0, .2, 1);
 }
 
-.ease-out {
-  transition-timing-function: cubic-bezier(0, 0, .2, 1);
-}
-
 @plugin "tailwindcss-radix";
 
 :root {
@@ -2239,6 +2229,10 @@ body {
 }
 
 @media (width >= 640px) {
+  .sm\:absolute {
+    position: absolute;
+  }
+
   .sm\:mb-6 {
     margin-bottom: 1.5rem;
   }

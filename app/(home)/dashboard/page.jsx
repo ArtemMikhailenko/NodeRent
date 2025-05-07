@@ -495,6 +495,7 @@ const NodesList = ({ nodes, selectedNodes, toggleNodeSelection, handleProlongate
 };
 
 // Single node item component
+// Single node item component
 const NodeItem = ({ node, isSelected, onSelect, onProlongate, isMenuOpen, onToggleMenu, isHovered }) => {
   const isActive = node["Project Status"] === "Active";
   
@@ -577,16 +578,29 @@ const NodeItem = ({ node, isSelected, onSelect, onProlongate, isMenuOpen, onTogg
           <span className="text-sm font-medium">5 min</span>
         </div>
         
-        {/* Uptime graph - adjustable on different screens */}
+        {/* Modified uptime graph - adjustable on different screens with gradient from red to green */}
         <div className="hidden md:block w-44">
-          <div className="flex w-full h-4 my-1 bg-midnight-900/60 rounded-full p-[2px] overflow-hidden border border-indigo-900/30">
-            {Array.from({ length: 24 }).map((_, i) => (
-              <div 
-                key={i} 
-                className={`w-1.5 h-full ${i < 22 ? 'bg-gradient-to-t from-indigo-600 to-indigo-400' : 'bg-midnight-700'} mx-[0.5px] rounded-sm ${i < 22 ? 'hover:bg-indigo-300 hover:scale-y-110' : ''} transition-all duration-200`}
-                style={{ height: i < 22 ? `${85 + Math.random() * 15}%` : '40%', transitionDelay: `${i * 20}ms` }}
-              />
-            ))}
+          <div className="flex w-full h-5 my-1 bg-midnight-900/60 rounded-full p-[2px] overflow-hidden border border-indigo-900/30">
+            {Array.from({ length: 24 }).map((_, i) => {
+              // Calculate progress percentage (0-100%) - in this example we're using i/24
+              const progress = i / 24;
+              // Create color based on progress: red (low) to yellow (medium) to green (high)
+              const color = getProgressColor(progress);
+              // Generate random height for each bar, higher values for simulation
+              const height = `${Math.min(100, 85 + Math.random() * 15)}%`;
+              
+              return (
+                <div 
+                  key={i} 
+                  className={`w-1.5 h-full mx-[0.5px] rounded-sm hover:scale-y-110 transition-all duration-200`}
+                  style={{ 
+                    height: i < 22 ? height : '40%', 
+                    backgroundColor: i < 22 ? color : '#374151',
+                    transitionDelay: `${i * 20}ms` 
+                  }}
+                />
+              );
+            })}
           </div>
           <div className="text-right text-sm text-indigo-400 font-medium">100%</div>
         </div>
@@ -642,6 +656,20 @@ const NodeItem = ({ node, isSelected, onSelect, onProlongate, isMenuOpen, onTogg
       </div>
     </div>
   );
+};
+
+// Helper function to get color based on progress percentage (0-1)
+const getProgressColor = (progress) => {
+  // Red to yellow to green gradient
+  if (progress < 0.5) {
+    // Red (hsl(0, 100%, 50%)) to Yellow (hsl(60, 100%, 50%))
+    const hue = progress * 2 * 60; // 0 to 60
+    return `hsl(${hue}, 100%, 50%)`;
+  } else {
+    // Yellow (hsl(60, 100%, 50%)) to Green (hsl(120, 100%, 45%))
+    const hue = 60 + (progress - 0.5) * 2 * 60; // 60 to 120
+    return `hsl(${hue}, 100%, ${50 - (progress - 0.5) * 10}%)`;
+  }
 };
 
 // Helper function to calculate uptime display
